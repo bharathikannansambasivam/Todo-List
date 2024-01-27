@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import del from "../assets/DELETE.webp";
+import icon from "../assets/TaskTracker.png";
 const TodoList = () => {
   const [newTodo, SetNewTodo] = useState("");
   const [todos, SetTodos] = useState([]);
@@ -10,17 +11,35 @@ const TodoList = () => {
       SetNewTodo("");
     }
   };
-
+  useEffect(() => {
+    SetTodos(JSON.parse(localStorage.getItem("todos")));
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      console.log(todos);
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }, 100);
+  }, [todos]);
   const deleteItem = (index) => {
     const TODOITEM = [...todos];
     TODOITEM.splice(index, 1);
     SetTodos(TODOITEM);
   };
 
+  const Enter = (event) => {
+    if (event.key === "Enter") {
+      add();
+    }
+  };
+
   return (
     <div className="bg-slate-500 h-screen ">
+      <div className=" flex items-center justify-center w-1/4 pt-3">
+        {" "}
+        <img className="h-24 w-24   " src={icon} alt="" />
+      </div>{" "}
       <div className="bg-slate-500 h-100">
-        <h1 className="flex  justify-center items-center text-4xl pt-10 pb-10 font-bold">
+        <h1 className="flex  justify-center items-center text-4xl  pb-10 font-bold">
           TODO LIST
         </h1>
 
@@ -30,6 +49,7 @@ const TodoList = () => {
             type="text"
             placeholder="Add Item"
             value={newTodo}
+            onKeyPress={Enter}
             onChange={(e) => {
               SetNewTodo(e.target.value);
             }}
