@@ -1,6 +1,6 @@
 {
   "short_name": "TODO LIST",
-  "name": "TODO",
+  "name": "TASK TRACKER",
   "orientation": "portrait-primary",
   "start_url": "../index.html",
   "display": "standalone",
