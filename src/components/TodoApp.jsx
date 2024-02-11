@@ -72,7 +72,12 @@ const TodoList = () => {
                   }`}
                   key={index}
                 >
-                  <input className="h-5 w-5 bg-slate-500" type="checkbox" />
+                  <div>
+                    <input
+                      className=" h-6 w-6 bg-slate-500 m-3 "
+                      type="checkbox"
+                    />
+                  </div>
 
                   {x}
                   <button
