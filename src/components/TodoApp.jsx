@@ -72,6 +72,8 @@ const TodoList = () => {
                   }`}
                   key={index}
                 >
+                  <input className="h-5 w-5 bg-slate-500" type="checkbox" />
+
                   {x}
                   <button
                     className=" flex flex-col justify-center items-center "
