@@ -1,0 +1,6 @@
+.completed {
+    text-decoration: line-through;
+  }
+  .back{
+    background: linear-gradient(#C499F3,#c892f7,);
+  }

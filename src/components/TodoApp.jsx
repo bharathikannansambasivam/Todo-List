@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import del from "../assets/DELETE.webp";
 import icon from "../assets/TaskTracker.png";
+import "./App.css";
 const TodoList = () => {
   const [newTodo, SetNewTodo] = useState("");
   const [todos, SetTodos] = useState([]);
@@ -33,12 +34,12 @@ const TodoList = () => {
   };
 
   return (
-    <div className="bg-slate-500 h-screen ">
+    <div className="back bg-purple-400	 h-screen ">
       <div className=" flex items-center justify-center w-1/4 pt-3">
         {" "}
         <img className="h-24 w-24   " src={icon} alt="" />
       </div>{" "}
-      <div className="bg-slate-500 h-100">
+      <div className=" back bg-purple-400 	 h-100">
         <h1 className="flex  justify-center items-center text-4xl  pb-10 font-bold">
           TODO LIST
         </h1>
