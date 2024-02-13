@@ -2,7 +2,7 @@
   "short_name": "TODO LIST",
   "name": "TASK TRACKER",
   "orientation": "portrait-primary",
-  "start_url": "../index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
 
@@ -16,7 +16,7 @@
     {
       "src": "maskable.png",
       "type": "image/png",
-      "sizes": "144x144",
+      "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
