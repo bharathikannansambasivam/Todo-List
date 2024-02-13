@@ -20,6 +20,11 @@
       "purpose": "any maskable"
     },
     {
+      "src": "144px.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
       "src": "maskable.png",
       "type": "image/png",
       "sizes": "192x192",
