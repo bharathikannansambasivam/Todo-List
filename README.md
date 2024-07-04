@@ -9,3 +9,4 @@
 - Add new tasks to the list.
 - Delete tasks from the list.
 - Tasks are stored in local storage for persistence.
+# fcs
